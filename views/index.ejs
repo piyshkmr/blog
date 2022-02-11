@@ -1,0 +1,30 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="container">
+  <div class="card">
+    <h1 class="title">Home</h1>
+    <p class="body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius rem ullam
+      veniam quisquam maxime, sequi explicabo necessitatibus eveniet quod
+      accusantium velit quia ratione esse aperiam doloribus totam? Sequi,
+      eveniet dicta. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      Reprehenderit, vitae nostrum corrupti enim quasi, temporibus unde, veniam
+      atque est rem in officia ut sapiente quod sed repellendus assumenda earum
+      facilis facere reiciendis. Quaerat a nobis nisi, recusandae voluptas
+      laboriosam et incidunt labore impedit pariatur magnam placeat eaque
+      quibusdam provident esse!
+    </p>
+  </div>
+
+  <% posts.forEach(post => { %>
+  <div class="card">
+    <h1 class="title"><%= post.title %></h1>
+    <p class="body">
+      <%= post.description %>
+      <a href="/<%= post.slug %>">Read More</a>
+    </p>
+  </div>
+  <% }) %>
+</div>
+
+<%- include("./partials/footer.ejs") %>

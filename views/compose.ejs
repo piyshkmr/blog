@@ -1,0 +1,26 @@
+<%- include("./partials/header.ejs") %>
+
+<div class="container">
+  <form action="/compose" method="post">
+    <label for="title">Title</label>
+    <input class="input" id="title" name="title" type="text" />
+    <label for="description">Description</label>
+    <textarea
+      class="input"
+      name="description"
+      id="description"
+      cols="30"
+      maxlength="200"
+      rows="4"
+    ></textarea>
+    <textarea name="body" id="my-expressjs-tinymce-app"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</div>
+
+<!-- Script element sourcing TinyMCE -->
+<script type="application/javascript" src="/tinymce/tinymce.min.js"></script>
+<!-- Script element sourcing the TinyMCE configuration -->
+<script type="application/javascript" src="my-tinymce-config.js"></script>
+
+<%- include("./partials/footer.ejs") %>
